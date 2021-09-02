@@ -1,0 +1,37 @@
+1)Посмотреть где я: pwd
+2)Создать папку: mkdir dir
+3)Зайти в папку: cd dir
+4)Создать 3 папки: mkdir dir1 dir2 dir3
+5)Зайти в любоую папку: cd dir2
+6)Создать 5 файлов (3 txt, 2 json): touch file1.txt file2.txt file3.txt file4.json file5.json
+7)Создать 3 папки: mkdir dir1 dir2 dir3
+8)Вывести список содержимого папки: ls -la
+9)Открыть любой txt файл: vim file1.txt
+12)Выйти из папки на уровень выше: cd ..
+13)Переместить любые 2 файла, которые вы создали, в любую другую папку: mv file1.txt file2.txt ..
+14)Скопировать любые 2 файла, которые вы создали, в любую другую папку: cp file4.json file5.json ..
+15)Найти файл по имени: find ./ -iname "file3.txt"
+16)Просмотреть содержимое в реальном времени: tail test.txt | grep -in text
+17)Вывести несколько первых строк из текстового файла: head file1.txt
+18)Вывести несколько последних строк из текстового файла: tail file1.txt
+19)Просмотреть содержимое длинного файла: less -N file1.txt
+20)Вывести дату и время: date
+
+
+Задание *
+1) Отправить http запрос на сервер.
+https://api.quarantine.country/api/v1/regions:
+
+curl -L 'http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000' -H 'Accept: application/json'
+
+2)Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13:
+
+#!/bin/bash
+mkdir dir
+cd dir
+mkdir dir1 dir2 dir3
+cd dir2
+touch file1.txt file2.txt file3.txt file4.json file5.json
+mkdir dir1 dir2 dir3
+ls -la
+mv file1.txt file2.txt ..
